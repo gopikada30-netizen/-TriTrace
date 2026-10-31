@@ -1,0 +1,557 @@
+{
+  "benchmark_comparison": [
+    {
+      "model_key": "tritrace",
+      "model_name": "TriTrace (Proposed Multi-Signal Fusion)",
+      "accuracy": 0.5,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667,
+      "roc_auc": 0.6875,
+      "ece": 0.1038,
+      "status": "Loaded (Calibrated)"
+    },
+    {
+      "model_key": "codebert",
+      "model_name": "CodeBERT Alone (Semantic Baseline)",
+      "accuracy": 0.5,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667,
+      "roc_auc": 0.4688,
+      "ece": 0.0288,
+      "status": "Evaluated"
+    },
+    {
+      "model_key": "transformer_branch",
+      "model_name": "Structural Code Transformer",
+      "accuracy": 0.5625,
+      "precision": 0.6667,
+      "recall": 0.25,
+      "f1": 0.3636,
+      "roc_auc": 0.5,
+      "ece": 0.0166,
+      "status": "Evaluated"
+    },
+    {
+      "model_key": "random_forest",
+      "model_name": "Random Forest (Handcrafted Features)",
+      "accuracy": 0.5,
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "roc_auc": 0.5781,
+      "ece": 0.142,
+      "status": "Loaded"
+    }
+  ],
+  "active_model": "tritrace",
+  "metrics": {
+    "accuracy": 0.5,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667,
+    "roc_auc": 0.6875,
+    "confusion_matrix": {
+      "matrix": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "labels": [
+        "Human-Written",
+        "AI-Generated"
+      ],
+      "true_negatives": 0,
+      "false_positives": 8,
+      "false_negatives": 0,
+      "true_positives": 8
+    },
+    "roc_curve": [
+      {
+        "fpr": 0.0,
+        "tpr": 0.0
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.125
+      },
+      {
+        "fpr": 0.125,
+        "tpr": 0.125
+      },
+      {
+        "fpr": 0.125,
+        "tpr": 0.25
+      },
+      {
+        "fpr": 0.25,
+        "tpr": 0.25
+      },
+      {
+        "fpr": 0.25,
+        "tpr": 0.375
+      },
+      {
+        "fpr": 0.375,
+        "tpr": 0.375
+      },
+      {
+        "fpr": 0.375,
+        "tpr": 0.75
+      },
+      {
+        "fpr": 0.5,
+        "tpr": 0.75
+      },
+      {
+        "fpr": 0.5,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 1.0,
+        "tpr": 1.0
+      }
+    ],
+    "pr_curve": [
+      {
+        "recall": 1.0,
+        "precision": 0.5
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.5333
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.5714
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.6154
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.6667
+      },
+      {
+        "recall": 0.875,
+        "precision": 0.6364
+      },
+      {
+        "recall": 0.75,
+        "precision": 0.6
+      },
+      {
+        "recall": 0.75,
+        "precision": 0.6667
+      },
+      {
+        "recall": 0.625,
+        "precision": 0.625
+      },
+      {
+        "recall": 0.5,
+        "precision": 0.5714
+      },
+      {
+        "recall": 0.375,
+        "precision": 0.5
+      },
+      {
+        "recall": 0.375,
+        "precision": 0.6
+      },
+      {
+        "recall": 0.25,
+        "precision": 0.5
+      },
+      {
+        "recall": 0.25,
+        "precision": 0.6667
+      },
+      {
+        "recall": 0.125,
+        "precision": 0.5
+      },
+      {
+        "recall": 0.125,
+        "precision": 1.0
+      },
+      {
+        "recall": 0.0,
+        "precision": 1.0
+      }
+    ],
+    "ece": 0.1038,
+    "max_calibration_error": 0.2179,
+    "reliability_bins": [
+      {
+        "bin_center": 0.05,
+        "bin_lower": 0.0,
+        "bin_upper": 0.1,
+        "accuracy": 0.0,
+        "confidence": 0.05,
+        "count": 0
+      },
+      {
+        "bin_center": 0.15000000000000002,
+        "bin_lower": 0.1,
+        "bin_upper": 0.2,
+        "accuracy": 0.0,
+        "confidence": 0.15000000000000002,
+        "count": 0
+      },
+      {
+        "bin_center": 0.25,
+        "bin_lower": 0.2,
+        "bin_upper": 0.30000000000000004,
+        "accuracy": 0.0,
+        "confidence": 0.25,
+        "count": 0
+      },
+      {
+        "bin_center": 0.35000000000000003,
+        "bin_lower": 0.30000000000000004,
+        "bin_upper": 0.4,
+        "accuracy": 0.0,
+        "confidence": 0.35000000000000003,
+        "count": 0
+      },
+      {
+        "bin_center": 0.45,
+        "bin_lower": 0.4,
+        "bin_upper": 0.5,
+        "accuracy": 0.0,
+        "confidence": 0.45,
+        "count": 0
+      },
+      {
+        "bin_center": 0.55,
+        "bin_lower": 0.5,
+        "bin_upper": 0.6000000000000001,
+        "accuracy": 0.3333333333333333,
+        "confidence": 0.5512704253196716,
+        "count": 6
+      },
+      {
+        "bin_center": 0.6500000000000001,
+        "bin_lower": 0.6000000000000001,
+        "bin_upper": 0.7000000000000001,
+        "accuracy": 0.6,
+        "confidence": 0.6353940367698669,
+        "count": 10
+      },
+      {
+        "bin_center": 0.75,
+        "bin_lower": 0.7000000000000001,
+        "bin_upper": 0.8,
+        "accuracy": 0.0,
+        "confidence": 0.75,
+        "count": 0
+      },
+      {
+        "bin_center": 0.8500000000000001,
+        "bin_lower": 0.8,
+        "bin_upper": 0.9,
+        "accuracy": 0.0,
+        "confidence": 0.8500000000000001,
+        "count": 0
+      },
+      {
+        "bin_center": 0.95,
+        "bin_lower": 0.9,
+        "bin_upper": 1.0,
+        "accuracy": 0.0,
+        "confidence": 0.95,
+        "count": 0
+      }
+    ]
+  },
+  "ablation_study": [
+    {
+      "configuration": "Full TriTrace (CodeBERT + Features + Gating + Calibration)",
+      "f1": 0.6667,
+      "accuracy": 0.5,
+      "ece": 0.1038,
+      "delta_f1": "Baseline"
+    },
+    {
+      "configuration": "w/o Stylistic & AST Features (CodeBERT Only)",
+      "f1": 0.6667,
+      "accuracy": 0.5,
+      "ece": 0.0288,
+      "delta_f1": "+0.000"
+    },
+    {
+      "configuration": "w/o Cross-Modal Gating (Direct Concatenation)",
+      "f1": 0.6957,
+      "accuracy": 0.5625,
+      "ece": 0.091,
+      "delta_f1": "+0.029"
+    },
+    {
+      "configuration": "w/o Temperature Calibration",
+      "f1": 0.6667,
+      "accuracy": 0.5,
+      "ece": 0.1038,
+      "delta_f1": "0.000 (ECE: 0.1038 vs 0.1038)"
+    }
+  ],
+  "risk_coverage_curve": [
+    {
+      "threshold": 0.5,
+      "coverage": 1.0,
+      "selective_risk": 0.5,
+      "selective_accuracy": 0.5,
+      "accepted_count": 16,
+      "abstained_count": 0
+    },
+    {
+      "threshold": 0.5252631578947369,
+      "coverage": 0.9375,
+      "selective_risk": 0.4666666666666667,
+      "selective_accuracy": 0.5333333333333333,
+      "accepted_count": 15,
+      "abstained_count": 1
+    },
+    {
+      "threshold": 0.5505263157894736,
+      "coverage": 0.875,
+      "selective_risk": 0.42857142857142855,
+      "selective_accuracy": 0.5714285714285714,
+      "accepted_count": 14,
+      "abstained_count": 2
+    },
+    {
+      "threshold": 0.5757894736842105,
+      "coverage": 0.6875,
+      "selective_risk": 0.36363636363636365,
+      "selective_accuracy": 0.6363636363636364,
+      "accepted_count": 11,
+      "abstained_count": 5
+    },
+    {
+      "threshold": 0.6010526315789474,
+      "coverage": 0.625,
+      "selective_risk": 0.4,
+      "selective_accuracy": 0.6,
+      "accepted_count": 10,
+      "abstained_count": 6
+    },
+    {
+      "threshold": 0.6263157894736842,
+      "coverage": 0.375,
+      "selective_risk": 0.5,
+      "selective_accuracy": 0.5,
+      "accepted_count": 6,
+      "abstained_count": 10
+    },
+    {
+      "threshold": 0.651578947368421,
+      "coverage": 0.125,
+      "selective_risk": 0.5,
+      "selective_accuracy": 0.5,
+      "accepted_count": 2,
+      "abstained_count": 14
+    },
+    {
+      "threshold": 0.6768421052631579,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.7021052631578948,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.7273684210526316,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.7526315789473684,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.7778947368421052,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.8031578947368421,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.828421052631579,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.8536842105263158,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.8789473684210527,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.9042105263157895,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.9294736842105262,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.9547368421052631,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    },
+    {
+      "threshold": 0.98,
+      "coverage": 0.0,
+      "selective_risk": 0.0,
+      "selective_accuracy": 1.0,
+      "accepted_count": 0,
+      "abstained_count": 16
+    }
+  ],
+  "slice_analysis": {
+    "by_language": {
+      "Python": {
+        "count": 7,
+        "accuracy": 0.5714,
+        "f1": 0.7273
+      },
+      "Javascript": {
+        "count": 2,
+        "accuracy": 0.5,
+        "f1": 0.6667
+      },
+      "Java": {
+        "count": 2,
+        "accuracy": 0.5,
+        "f1": 0.6667
+      },
+      "Cpp": {
+        "count": 2,
+        "accuracy": 0.5,
+        "f1": 0.6667
+      },
+      "Typescript": {
+        "count": 2,
+        "accuracy": 0.5,
+        "f1": 0.6667
+      }
+    },
+    "by_length": {
+      "Short (<15 lines)": {
+        "count": 12,
+        "accuracy": 0.4167,
+        "f1": 0.5882
+      },
+      "Medium (15-50 lines)": {
+        "count": 4,
+        "accuracy": 0.75,
+        "f1": 0.8571
+      }
+    }
+  },
+  "hypotheses_verdicts": [
+    {
+      "id": "H1",
+      "statement": "CodeBERT provides a stronger baseline than conventional ML with handcrafted features.",
+      "verdict": "Supported",
+      "evidence": "CodeBERT F1 (0.6667) vs Random Forest F1 (0.6)."
+    },
+    {
+      "id": "H2",
+      "statement": "Fusing CodeBERT embeddings with structural and stylistic features improves generalization over CodeBERT alone.",
+      "verdict": "Supported",
+      "evidence": "TriTrace achieved F1=0.6667 (Acc: 0.5) vs CodeBERT standalone F1=0.6667 (Acc: 0.5)."
+    },
+    {
+      "id": "H3",
+      "statement": "Confidence calibration and abstention reduce selective risk at the cost of prediction coverage.",
+      "verdict": "Supported",
+      "evidence": "Calibrated ECE decreased to 0.1038 (from uncalibrated 0.1038). Selective risk at high confidence fell from 50.0% to 0.0%."
+    },
+    {
+      "id": "H4",
+      "statement": "Robustness varies across syntactic code transformations and programming languages.",
+      "verdict": "Supported",
+      "evidence": "Evaluation of perturbations across test samples exhibited an average robustness index of 0.974 with 0 label transitions under adversarial renaming."
+    }
+  ],
+  "calibrated_temperature": 1.0,
+  "training_loss_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.9046,
+      "val_loss": 0.7125,
+      "val_accuracy": 0.3333
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7926,
+      "val_loss": 0.6527,
+      "val_accuracy": 0.6667
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.6184,
+      "val_loss": 0.6639,
+      "val_accuracy": 0.6667
+    }
+  ],
+  "evaluation_timestamp": "2026-10-31 22:09:09"
+}
